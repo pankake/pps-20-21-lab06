@@ -1,13 +1,13 @@
 package u06lab.code
 
 /** Consider the Parser example shown in previous lesson.
-  * Analogously to NonEmpty, create a mixin NotTwoConsecutive,
-  * which adds the idea that one cannot parse two consecutive
-  * elements which are equal.
-  * Use it (as a mixin) to build class NotTwoConsecutiveParser,
-  * used in the testing code at the end.
-  * Note we also test that the two mixins can work together!!
-  */
+ * Analogously to NonEmpty, create a mixin NotTwoConsecutive,
+ * which adds the idea that one cannot parse two consecutive
+ * elements which are equal.
+ * Use it (as a mixin) to build class NotTwoConsecutiveParser,
+ * used in the testing code at the end.
+ * Note we also test that the two mixins can work together!!
+ */
 
 abstract class Parser[T] {
   def parse(t: T): Boolean  // is the token accepted?
@@ -64,5 +64,3 @@ object TryParsers extends App {
   println(sparser.parseAll("aabcdc".toList)) // false
   println(sparser.parseAll("".toList)) // true
 }
-
-
